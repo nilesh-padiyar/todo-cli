@@ -19,13 +19,15 @@ console.log(`Target: ${argument}`);
 // Help Box
 const help = {
     "add task": `todo add "task_name"`,
-    "delete task": `todo delete X, where X refers to task number/ID.`,
+    "delete task": `todo delete <task_id>`,
     "delete all tasks": `todo delete --all`,
-    "delet all tasks (no confirmation)": `todo delete --all -y`,
+    "delete all tasks (no confirmation)": `todo delete --all -y`,
     "list pending tasks": `todo list`,
     "list completed tasks": `todo list --done`,
     "list all tasks": `todo list --all`,
-    "clear completed tasks": `todo clear`
+    "mark a task as done": `todo done <task_id>`,
+    "clear completed tasks": `todo clear`,
+    "clear completed tasks (no confirmation)": `todo clear --all -y`
 };
 
 // Check Commands inputed by user
@@ -41,7 +43,7 @@ function checkCommand() {
     } else if (command === `delete`) {
         return deleteTask(tasks, argument, flag, confirmAction);
     } else if (command === `clear`) {
-        return clearTasks(tasks);
+        return clearTasks(tasks, flag, confirmAction);
     } else if (command === `help`) {
         console.table(help);
     } else {

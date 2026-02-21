@@ -108,9 +108,29 @@ function deleteTask(tasks, argument, flag, confirmAction) {
 }
 
 // Clear Completed Tasks
-function clearTasks(tasks) {
-    const toClear = tasks.filter(t => !t.completed);
-    return saveTasks(toClear);
+function clearTasks(tasks, flag, confirmAction) {
+    const completedExists = tasks.some(t => t.completed);
+
+    if (!completedExists) {
+        return console.log(`No completed tasks to clear.`);
+    }
+
+    if (flag === `-y`) {
+        const remaining = tasks.filter(t => !t.completed);
+        saveTasks(remaining);
+        console.log(`All completed tasks cleared successfully.`);
+    } else {
+        confirmAction(`Are you sure you want to clear all completed tasks?`, confirmed => {
+            if (confirmed) {
+                const remaining = tasks.filter(t => !t.completed);
+                saveTasks(remaining);
+                console.log(`All completed tasks cleared successfully.`);
+            } else {
+                console.log(`Operation cancelled by user.`);
+            }
+        });
+    }
+    return;
 }
 
 // Export Functions

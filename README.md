@@ -1,3 +1,4 @@
+
 # todo-cli
 
 A simple, lightweight CLI To-Do app built with **Node.js**
@@ -29,31 +30,55 @@ Before installing ```todo-cli```, make sure you have:
 **1. Add a task:**
 ```todo add "task name"```
 
+<br>
+
 **2. Mark a task as done:**
 ```todo done <task_id>```
+
+<br>
 
 **3. List tasks -**
 **(i) Pending tasks (default):**
 ``` todo list```
 
+<br>
+
 **(ii) Completed tasks:**
 ```todo list --done```
 
+<br>
+
 **(iii) All tasks:**
 ```todo list --all```
+
+<br>
 
 **4. Delete tasks -**
 **(i) Delete a single task by ID:**
 ```todo delete <task_id>```
 
+<br>
+
 **(ii) Delete all tasks with confirmation:**
 ```todo delete --all```
+
+<br>
 
 **(iii) Delete all tasks without confirmation:**
 ```todo delete --all -y```
 
-**5. Clear completed tasks:**
+<br>
+
+**5. Clear completed tasks -**
+**(i) Clear completed tasks with confirmation:**
 ```todo clear```
+
+<br>
+
+**(ii) Clear completed without confirmation:**
+```todo clear --all -y```
+
+<br>
 
 **6. Help:**
 ```todo help```
@@ -66,9 +91,9 @@ Before installing ```todo-cli```, make sure you have:
 
 Add, list, mark done, delete tasks
 
-Optional ```-y``` flag for ```delete-all``` to skip confirmation
+Optional ```-y``` flag for ```delete --all``` and ```clear``` to skip confirmation.
 
-Stores tasks in **tasks.json** locally
+Stores tasks in **tasks.json** locally.
 
 Designed for robust command usage (no flexible ordering)
 
@@ -85,6 +110,7 @@ No data is sent to any server or third-party service.
 # Contributing
 
 This project is for personal growth, but contributions are welcome.
+
 Feel free to **fork**, **submit issues**, or **PRs**.
 
 ---
