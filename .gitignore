@@ -1,0 +1,13 @@
+
+# Node modules 
+node_modules
+
+# Local tasks storage
+tasks.json
+
+# OS or Editor files
+.DS_Store
+Thumbs.db
+*.log
+
+npm-debug.log*
