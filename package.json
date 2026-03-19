@@ -1,6 +1,6 @@
 
 {
-  "name": "todo-cli",
+  "name": "@nilesh-padiyar/todo-cli",
   "version": "1.0.0",
   "description": "A simple, lightweight CLI To-Do app built with Node.js. Manage your tasks directly from the terminal with easy commands.",
   "main": "todo.js",

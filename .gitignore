@@ -1,6 +1,7 @@
 
-# Node modules 
+# Dependencies
 node_modules
+npm-debug.log*
 
 # Local tasks storage
 tasks.json
@@ -9,5 +10,6 @@ tasks.json
 .DS_Store
 Thumbs.db
 *.log
-
-npm-debug.log*
+.vscode
+.idea
+coverage

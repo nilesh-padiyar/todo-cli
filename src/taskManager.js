@@ -1,7 +1,3 @@
-
-// Handles all the properties of app
-
-
 // Import required function from fileHandler.js and todo.js
 const {saveTasks} = require(`./fileHandler`);
 

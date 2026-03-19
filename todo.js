@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-// Basic CLI To-Do App
-
-
 // Import required functions from fileHandler.js and taskManager.js
 const {saveTasks, loadTasks} = require(`./src/fileHandler`);
 const {addTask, markDone, listTasks, deleteTask, clearTasks} = require(`./src/taskManager`);

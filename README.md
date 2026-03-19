@@ -8,7 +8,7 @@ Manage your tasks directly from the terminal with easy commands.
 
 # Installation 
 
-```npm install -g git+https://github.com/nilesh-padiyar/todo-cli.git```
+```npm install -g @nilesh-padiyar/todo-cli```
 
 <br>
 
@@ -120,3 +120,10 @@ Feel free to **fork**, **submit issues**, or **PRs**.
 **MIT** — free to use, modify, and distribute.
 
 ---
+
+# Author
+
+[Nilesh Padiyar](https://github.com/nilesh-padiyar/)
+
+---
+

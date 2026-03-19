@@ -1,7 +1,3 @@
-
-// Hanles tasks.json file
-
-
 // File Path
 const fs = require('fs');
 const filePath = './tasks.json';
