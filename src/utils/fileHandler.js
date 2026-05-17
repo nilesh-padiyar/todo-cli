@@ -7,8 +7,9 @@ function loadTasks() {
     if (!fs.existsSync(filePath)) {
         return [];
     }
+
     const data = fs.readFileSync(filePath, 'utf-8');
-    return data ? JSON.parse(data): [];
+    return data ? JSON.parse(data) : [];
 }
 
 // Save Tasks to .json file
@@ -17,4 +18,4 @@ function saveTasks(tasks) {
 }
 
 // Export Functions
-module.exports = {loadTasks, saveTasks};
+module.exports = { loadTasks, saveTasks };

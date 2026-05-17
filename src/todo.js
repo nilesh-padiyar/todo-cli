@@ -1,17 +1,25 @@
 #!/usr/bin/env node
 
+const chalk = require('chalk');
+
 // Import required functions from fileHandler.js and taskManager.js
-const {saveTasks, loadTasks} = require(`./src/fileHandler`);
-const {addTask, markDone, listTasks, deleteTask, clearTasks} = require(`./src/taskManager`);
+const { loadTasks, saveTasks } = require(`./utils/fileHandler`);
+const {
+    addTask,
+    markDone,
+    listTasks,
+    deleteTask,
+    clearTasks
+} = require(`./core/taskManager`);
 
 
 // Command, Argument & Argument Detecting
-const [ ,  , command = `help`, argument, flag] = process.argv;
+const [, , command = `help`, argument, flag] = process.argv;
 
-//Printing Processes
-console.log(`Checking system...`);
-console.log(`Action: ${command}`);
-console.log(`Target: ${argument}`);
+// Printing Processes
+console.log(chalk.blue(`Checking system...`));
+console.log(chalk.green(`Action:`), chalk.white(command));
+console.log(chalk.yellow(`Target:`), chalk.white(argument || `None`));
 
 // Help Box
 const help = {
@@ -45,7 +53,7 @@ function checkCommand() {
         console.table(help);
     } else {
         showHelp();
-        return console.log(`Unknown Command. Try "help" command.`);
+        return console.log(chalk.red(`Unknown Command. Try "help" command.`));
     }
 }
 
@@ -59,10 +67,10 @@ function confirmAction(message, callBack) {
         output: process.stdout
     });
 
-    rl.question(`${message} (y/n): `, (answer) => {
+    rl.question(chalk.yellow(`${message} (y/n): `), (answer) => {
         rl.close();
         callBack(answer.toLowerCase() === `y`);
-    })
+    });
 }
 
 // Display Help

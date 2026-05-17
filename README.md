@@ -1,5 +1,5 @@
 
-# todo-cli
+# [todo-cli](https://www.npmjs.com/package/@nilesh-padiyar/todo-cli)
 
 A simple, lightweight CLI To-Do app built with **Node.js**
 Manage your tasks directly from the terminal with easy commands.

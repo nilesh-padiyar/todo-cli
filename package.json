@@ -1,18 +1,28 @@
-
 {
   "name": "@nilesh-padiyar/todo-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple, lightweight CLI To-Do app built with Node.js. Manage your tasks directly from the terminal with easy commands.",
   "main": "todo.js",
   "bin": {
-	  "todo": "./todo.js"
+    "todo": "./todo.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://github.com/nilesh-padiyar/todo-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilesh-padiyar/todo-cli"
+  },
   "keywords": [
-	"cli", "todo", "task", "productivity", "nodejs"
+    "cli",
+    "todo",
+    "task",
+    "task"
   ],
   "author": "Nilesh Padiyar <https://github.com/nilesh-padiyar>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
 }
