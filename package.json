@@ -4,7 +4,7 @@
   "description": "A simple, lightweight CLI To-Do app built with Node.js. Manage your tasks directly from the terminal with easy commands.",
   "main": "todo.js",
   "bin": {
-    "todo": "./todo.js"
+    "todo": "./src/todo.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
