@@ -1,3 +1,4 @@
+
 const chalk = require('chalk');
 
 // Import required function from fileHandler.js
@@ -184,11 +185,39 @@ function clearTasks(tasks, flag, confirmAction) {
     return;
 }
 
+// Search Tasks
+function searchTasks(tasks, argument) {
+    const keyword = argument;
+
+    if (!keyword) {
+        return console.log(
+            chalk.red(`Error: Please provide a search keyword.`)
+        );
+    }
+
+    const results = tasks.filter(task =>
+        task.text.toLowerCase().includes(keyword.toLowerCase())
+    );
+
+    if (results.length === 0) {
+        return console.log(
+            chalk.yellow(`No matching tasks found.`)
+        );
+    }
+
+    console.log(
+        chalk.cyan(`\n--- SEARCH RESULTS ---`)
+    );
+
+    console.table(results);
+}
+
 // Export Functions
 module.exports = {
     addTask,
     markDone,
     listTasks,
     deleteTask,
-    clearTasks
+    clearTasks,
+    searchTasks
 };

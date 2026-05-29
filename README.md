@@ -28,7 +28,7 @@ Before installing ```todo-cli```, make sure you have:
 ## Usage
 
 **1. Add a task:**
-```todo add "task name"```
+```todo add "<task>"```
 
 <br>
 
@@ -80,7 +80,10 @@ Before installing ```todo-cli```, make sure you have:
 
 <br>
 
-**6. Help:**
+**6. Search Tasks** (*v1.2.0*)
+```todo search "<keyword>"```
+
+**7. Help:**
 ```todo help```
 
 ---
@@ -104,6 +107,12 @@ Designed for robust command usage (no flexible ordering)
 **todo-cli** is a fully local CLI app. All tasks are stored on your device in ```tasks.json```.
 
 No data is sent to any server or third-party service.
+
+---
+
+# Uninstall
+
+```npm uninstall -g @nilesh-padiyar/todo-cli```
 
 ---
 

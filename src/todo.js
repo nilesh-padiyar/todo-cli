@@ -9,7 +9,8 @@ const {
     markDone,
     listTasks,
     deleteTask,
-    clearTasks
+    clearTasks,
+    searchTasks  
 } = require(`./core/taskManager`);
 
 
@@ -23,7 +24,8 @@ console.log(chalk.yellow(`Target:`), chalk.white(argument || `None`));
 
 // Help Box
 const help = {
-    "add task": `todo add "task_name"`,
+    "add task": `todo add "<task>"`,
+    "search task": `todo search "<keyword>"`,
     "delete task": `todo delete <task_id>`,
     "delete all tasks": `todo delete --all`,
     "delete all tasks (no confirmation)": `todo delete --all -y`,
@@ -49,6 +51,8 @@ function checkCommand() {
         return deleteTask(tasks, argument, flag, confirmAction);
     } else if (command === `clear`) {
         return clearTasks(tasks, flag, confirmAction);
+    } else if (command === `search`) {
+        return searchTasks(tasks, argument)
     } else if (command === `help`) {
         console.table(help);
     } else {
